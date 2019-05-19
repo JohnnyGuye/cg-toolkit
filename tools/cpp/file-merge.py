@@ -72,6 +72,7 @@ for user_file in user_files_ordered:
 	includedOnce = False
 	for line in lines:
 		if "#include" in line: continue
+		if "#pragma once" in line: continue
 
 		if line.strip() == "" and not includedOnce: continue
 

@@ -1,4 +1,5 @@
 #include "2DGridGame/position.h"
+#include "2DGridGame/grid.h"
 #include "time/stopwatch.h"
 
 int main() {
