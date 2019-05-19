@@ -1,12 +1,10 @@
-#pragma once
-
 #include <iostream>
 #include <chrono>
 
 
-//============================================================
+// Merge tool =================================================
 // Imported from the file: 2DGridGame/position.h
-//============================================================
+// ============================================================
 
 namespace GridGame {
 
@@ -119,9 +117,47 @@ namespace GridGame {
 
 }
 
-//============================================================
+// Merge tool =================================================
+// Imported from the file: 2DGridGame/grid.h
+// ============================================================
+
+namespace GridGame {
+	
+	// Turning clockwise from right
+	enum Directions {
+		RIGHT, DOWN, LEFT, UP
+	};
+	constexpr auto EAST = RIGHT,
+		SOUTH = DOWN, 
+		WEST = LEFT, 
+		NORTH = UP;
+
+	struct BaseCell {
+
+	};
+
+	struct BasePositionedCell : BaseCell {
+		Position pos = Position( -1 );
+	};
+
+	struct BaseNeighboroodCell : BasePositionedCell {
+		BaseNeighboroodCell* neighbours[4]{ nullptr, nullptr, nullptr, nullptr };
+
+		BaseNeighboroodCell* right() {	return neighbours[RIGHT];	}
+		BaseNeighboroodCell* down() {	return neighbours[DOWN];	}
+		BaseNeighboroodCell* left() {	return neighbours[LEFT];	}
+		BaseNeighboroodCell* up() {		return neighbours[UP];		}
+
+	};
+
+	struct DynamicGrid {
+
+	};
+}
+
+// Merge tool =================================================
 // Imported from the file: time/stopwatch.h
-//============================================================
+// ============================================================
 
 #define CHRONO std::chrono
 #define HR_CLOCK CHRONO::high_resolution_clock
@@ -173,9 +209,9 @@ namespace Time {
 #undef CHRONO
 #undef HR_CLOCK
 
-//============================================================
+// Merge tool =================================================
 // Imported from the file: main.cpp
-//============================================================
+// ============================================================
 
 int main() {
 
