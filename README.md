@@ -9,4 +9,4 @@ For cpp/c, note that you cannot use compile units due to the restrictions of the
 
 ## Tools
 The tool part is a set of tools mostly for local code.
-- Merge tool : needs to be created by language, but in essence, it merges all the files you needed to develop your solution in a single file to feed the codingame plateform.
+- **Merge tool** : needs to be created by language, but in essence, it merges all the files you needed to develop your solution in a single file to feed the codingame plateform.
